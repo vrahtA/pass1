@@ -2,9 +2,9 @@ import java.util.*;
 import java.io.*;
 class MACRO
 {
-static String mnt[][]=new String[5][3]; //assuming 5 macros in 1 
-static String ala[][]=new String[10][2]; //assuming 2 arguments in 
-static String mdt[][]=new String[20][1]; //assuming 4 LOC for each 
+static String mnt[][]=new String[5][3]; 
+static String ala[][]=new String[10][2]; 
+static String mdt[][]=new String[20][1]; 
 static int mntc=0,mdtc=0,alac=0;
 public static void main(String args[])
 {
@@ -45,15 +45,15 @@ StringTokenizer st=new StringTokenizer(s);
 String str[]=new String[st.countTokens()];
 for(i=0;i<str.length;i++)
 str[i]=st.nextToken();
-mnt[mntc][0]=(mntc+1)+""; //mnt formation
+mnt[mntc][0]=(mntc+1)+"";
 mnt[mntc][1]=str[0];
 mnt[mntc++][2]=(++mdtc)+"";
-st=new StringTokenizer(str[1],","); //tokenizing the arguments
+st=new StringTokenizer(str[1],",");
 String string[]=new String[st.countTokens()];
 for(i=0;i<string.length;i++)
 {
 string[i]=st.nextToken();
-ala[alac][0]=alac+""; //ala table formation
+ala[alac][0]=alac+"";
 index=string[i].indexOf("=");
 if(index!=-1)
 ala[alac++][1]=string[i].substring(0,index);
